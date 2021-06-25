@@ -50,3 +50,10 @@ body {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
+
+table {
+    margin: 0 !important;
+}
+td {
+    padding: 0;
+}
