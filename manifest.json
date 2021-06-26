@@ -1,0 +1,20 @@
+{
+  "short_name": "StaminaPR",
+  "name": "Stamina PR",
+  "icons": [
+    {
+      "src": "#",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "#",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "ddrexp.nl/staminapr",
+  "background_color": "#ffcc6d",
+  "display": "standalone",
+  "theme_color": "#ffba00"
+}
