@@ -45,6 +45,7 @@
                     $token         = $row['token'];
                     $is_active     = $row['is_active'];
                     $valid         = $row['valid'];
+                    $admin         = $row['admin'];
                 }
 
                 // Verify password
@@ -61,6 +62,7 @@
                        $_SESSION['token']          = $token;
                        $_SESSION['is_active']      = $is_active;
                        $_SESSION['valid']          = $valid;
+                       $_SESSION['admin']          = $admin;
                         
 
                     } else {

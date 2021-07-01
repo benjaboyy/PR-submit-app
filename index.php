@@ -22,11 +22,11 @@ include "include/header.php";
 
         <div class="checkbox mb-3">
           <p>
-              <a href="#">Registreren</a>
+              <a href="signup.php">Registreren</a>
           </p>
         </div>
         <button name="login" id="sign_in" class="w-100 btn btn-lg btn-primary" type="submit">Inloggen</button>
-          <p class="mt-5 mb-3 text-muted"><strong>DDR-EXP </strong>/<strong> ITGASS</strong> &copy; 2020–2021</p>
+          <p class="mt-5 mb-3 text-muted"><strong>DDR-EXP </strong>/<strong> ITGASS</strong> &copy; 2019–2021</p>
       </form>
         <!--tester_script-->
           <?php

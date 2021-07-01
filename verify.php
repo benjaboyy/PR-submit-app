@@ -1,31 +1,28 @@
-<header>
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <link href="css/custom.css" rel="stylesheet">
-</header>
-<body>
-   <div class="container container-fluid">
-    <div class="d-grid gap-2">
-        <table class="table table-hover">
-          <thead class="">
-            <tr>
-              <td colspan="4"><h1 class="text-primary">Scores verifieren</h1></td><td class="text-end"><a href="dashboard.html">Terug</a></td>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>20</td><td>ITGASS</td><td>Song name</td><td>180</td><td>26-06-2021</td>
-            </tr>
-            <tr>
-              <td>20</td><td>ITGASS</td><td>Song name</td><td>180</td><td>26-06-2021</td>
-            </tr>
-            <tr>
-              <td>20</td><td>ITGASS</td><td>Song name</td><td>180</td><td>26-06-2021</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-</body>
-<footer>
-    <script src="js/bootstrap.bundle.min.js"></script>
-</footer>
+<?php
+    include('include/db.php');
+
+    if($_SESSION['admin'] == '1'){
+        $verify_id = intval($_GET['id']);
+        
+        // Query
+        $sqls = "UPDATE stamina_pr SET valid='1' WHERE id='$verify_id'";
+           
+        // Create mysql query
+        $stmt = mysqli_query($connection, $sqls);
+        
+        if (mysqli_query($connection, $sqls)) {            
+            $melding = "Score goedgekeurd";
+            header('Location: dashboard.php?melding='.$melding);
+        } else {
+            $message = "Error with quiry";
+            mysqli_free_result($stmt);
+        }
+        
+
+    }else {
+        $message = "Can't update";
+    }
+?>
+
+<?php echo $verify_id; ?><br>
+<?php echo $message; ?><br>

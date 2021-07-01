@@ -1,8 +1,8 @@
 <?php
           
-if($_SESSION['is_active'] == '1'){
+if($_SESSION['admin'] == '1'){
        // Query
-        $scores = "SELECT * From stamina_pr WHERE valid = '1' ORDER BY difficulty DESC";
+        $scores = "SELECT * From stamina_pr WHERE valid = '0'";
         $query_scores = mysqli_query($connection, $scores);
 //        $result = $mysqli->query($scores);
         
@@ -20,19 +20,20 @@ if($_SESSION['is_active'] == '1'){
             $difficulty           = $row['difficulty'];
             
             $output_list .= '
-                    <div id="'.$id_scores.'" class="card border-primary">
+                    <div id="'.$id_scores.'" class="card border-secondary">
                       <div class="card-body">
                         <table class="table table-borderless">
                             <tr>
                                 <td>
-                                    <div style="margin-right: 20px; width: 55px; height: 55px; margin-bottom: 0 !important; padding: 8px !important;   " class=" rounded float-start p-3 mb-2 bg-primary text-white"><center><span class="mx-auto" style="font-size: 21pt;">'.$difficulty.'</span></center>
+                                    <div style="margin-right: 20px; width: 55px; height: 55px; margin-bottom: 0 !important; padding: 8px !important;   " class=" rounded float-start p-3 mb-2 bg-secondary text-white"><center><span class="mx-auto" style="font-size: 21pt;">'.$difficulty.'</span></center>
 
                                     </div>
                                     <h5 class="card-title">'.$tag.'</h5>
                                     <h6 style="margin-bottom:0 !important;" class="card-subtitle mb-2 text-muted">'.$song.'</h6>
                                 </td>
                                 <td style="vertical-align: middle; width: 40%;">
-                                    <span style="font-size: 20pt;">BPM: '.$bpm.'</span>
+                                    <span style="font-size: 20pt;">BPM: '.$bpm.'</span> 
+                                    <a class="btn btn-primary btn-sm" href="verify.php?id='.$id_scores.'">Verify</a>
                                 </td>
                             </tr>
                         </table>
