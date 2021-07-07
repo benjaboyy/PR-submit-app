@@ -54,7 +54,6 @@
                 // Allow only verified user
                 if($is_active == '1') {
                     if($email_signin == $email && $password_signin == $password) {
-                       header("Location: index.php");
                        
                        $_SESSION['id']             = $id;
                        $_SESSION['user']           = $user;
@@ -63,6 +62,7 @@
                        $_SESSION['is_active']      = $is_active;
                        $_SESSION['valid']          = $valid;
                        $_SESSION['admin']          = $admin;
+                       header("Location: index.php");
                         
 
                     } else {

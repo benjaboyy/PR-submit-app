@@ -12,7 +12,7 @@
         $stmt = mysqli_query($connection, $sqls);
         
         if (mysqli_query($connection, $sqls)) {
-            $melding = "Account bewerkt";
+            $melding = "Jou score is aangepast en zal hier zichtbaar worden als hij is goedgekeurd";
             header('Location: dashboard.php?melding='.$melding);
         } else {
             $message = "Error with quiry";

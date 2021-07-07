@@ -1,4 +1,11 @@
-<?php
+<?php    
+$mess = $_GET['melding'];
+if($mess == "succes") {
+    $melding = '
+    <div class="alert alert-secondary email_alert">
+        Registratie aangemaakt.
+    </div>';
+}
 include "include/header.php";
 ?>
 <body>
@@ -11,6 +18,7 @@ include "include/header.php";
         <?php echo $verificationRequiredErr; ?>
         <?php echo $email_empty_err; ?>
         <?php echo $pass_empty_err; ?>
+        <?php echo $melding; ?>
         <div class="form-floating">
           <input type="email" class="form-control" name="email_signin" id="email_signin" placeholder="name@example.com">
           <label for="floatingInput">Email adres</label>

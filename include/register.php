@@ -62,7 +62,7 @@
                     $token = md5(rand().time());
 
                     // Password hash
-                    $password_hash = password_hash($password, PASSWORD_BCRYPT);
+                    $password_hash = password_hash($pass, PASSWORD_BCRYPT);
 
                     // Query
                     $sql = "INSERT INTO stamina_pr (user, email, pass, token, is_active,
@@ -71,10 +71,15 @@
                     // Create mysql query
                     $sqlQuery = mysqli_query($connection, $sql);
                     
-                    if(!$sqlQuery){
+                    if (!$sqlQuery) {
+                        $message = "Error with quiry";
+                        mysqli_free_result($stmt);
                         die("MySQL query failed!" . mysqli_error($connection));
                         echo $user;
-                    } 
+                        
+                    } else {
+                       header("Location: index.php?melding=succes");
+                    }
                 }
             }
         } else {

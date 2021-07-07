@@ -16,7 +16,7 @@ include('include/register.php');
 
                     <?php echo $success_msg; ?>
                     <?php echo $email_exist; ?>
-
+                    <?php echo $message; ?>
                     <?php echo $email_verify_err; ?>
                     <?php echo $email_verify_success; ?>
 
