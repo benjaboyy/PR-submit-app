@@ -30,7 +30,7 @@
     </div>
     <br>
     <div class="d-grid gap-2">
-      <a name="annuleer" id="no" href="sign_out.php" class="btn btn-secondary btn-lg" type="button">Uitloggen</a>
+      <a name="annuleer" style="margin-bottom:20px;" id="no" href="sign_out.php" class="btn btn-secondary btn-lg" type="button">Uitloggen</a>
     </div>
    </div>
 </body>
