@@ -11,8 +11,7 @@ include "include/header.php";
 <body>
     <main class="form-signin">
       <form action="" method="post">
-        <h1 class="text-primary">ITG STAMINA PR</h1>
-        <hr/>
+        <img src="img/stamina%20PR-39.png" class="img-fluid" alt="title image"/>
         <?php echo $accountNotExistErr; ?>
         <?php echo $emailPwdErr; ?>
         <?php echo $verificationRequiredErr; ?>
