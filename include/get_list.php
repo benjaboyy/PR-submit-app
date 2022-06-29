@@ -2,7 +2,7 @@
           
 if($_SESSION['is_active'] == '1'){
        // Query
-        $scores = "SELECT * From stamina_pr WHERE valid = '1' ORDER BY difficulty DESC";
+        $scores = "SELECT * From stamina_pr WHERE valid = '1' ORDER BY difficulty DESC, bpm DESC";
         $query_scores = mysqli_query($connection, $scores);
 //        $result = $mysqli->query($scores);
         
